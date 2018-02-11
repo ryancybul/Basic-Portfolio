@@ -1,10 +1,13 @@
 body {
-    background: #efefef;
-    margin: 0;
+    height: 100%;
+    background-image: url("./../images/cork-wallet.png")
 }
+/*header style*/
 
 header {
     background: white;
+    height: 80px;
+    width: 100%;
 }
 
 .header-wrapper {
@@ -18,71 +21,143 @@ header {
 .header-name   {
     color: white;
     background: #55aaa4;
-    padding: 10px 50px 10px 50px;
-    margin-top: 0;
-    margin-bottom: 0;
+    Height: 80px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }  
 
 nav a {
     padding: 15px;
-    color: grey;
     text-decoration: none;
-    padding: 10px 20px 10px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
-hr { 
-    display: block;
-    margin: 0 auto;
-    border-width: 3px;
-    color: gray;
-}
+ /*content section*/
 
 .content-wrapper    {
-    max-width: 960px;
-    margin: 40px auto 40px auto;
+    width: 960px;
+    margin: 40px auto auto auto;
     display: flex;
     justify-content: space-between;
 }
 
-.about-me   {
-    padding: 0px 50px 0px 50px;
-}
-
 .content-main-section {
-    max-width: 650px;
+    width: 650px;
     background: white;
+    padding: 25px 25px 25px 25px;
 }
 
-.sidebar    {
+.content-main-section p {
+    line-height: 2;
+    text-indent: 25px;
+}
+
+.hr-margin {
+    margin: 25px 0px 25px 0px; 
+}
+
+/*connect with me*/
+
+.connect    {
     width: 270px;
     height: 200px;
     background: white;
 }
 
+.connect-with-me {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.hr-connect {
+    width: 75%;
+    border-top: .25px solid #cacdcd;
+    margin: 0 auto;
+}
+
+.icons-connect {
+    height: 50%;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*footer style*/
+
+.footer {
+    background: #666666;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: .75em;
+    padding-top: 40px;
+    color: white;
+    
+}
+
+.hr-thick { 
+   border-top: 2px solid #cacdcd;
+   margin: 0 auto;
+}
+
+
+
 /*font*/
 
 p, nav a {
-    font-family; 'Arial', 'Helvetica Neue', Helvetica, sans-serif;.
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: grey;
 }
 
+
 h1, h2, h3  {
-    font-family: font-family: 'Georgia', Times, Times New Roman, serif;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     font-weight: bold;
     color: #55aaa4;
 }
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 { 
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
 
 /*images*/
 
 .resize-icon {
     width: 60px;
-    height: auto;
+    height: 60px;
 }
 
 .profile-picture    {
     float: left;
     width: 200px;
     height: auto;
-    padding: 0px 25px 0px 25px;
+    padding: 10px 15px 0px 0px;
 }
 
   
