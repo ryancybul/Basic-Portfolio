@@ -104,7 +104,7 @@ nav a {
 }
 
 .msg {
-    min-height: 180px;
+    min-height: 120px;
     min-width: 600px;
     max-width: 600px;
 }
@@ -172,7 +172,7 @@ nav a {
 
 /*font*/
 
-p, nav a {
+p, nav a, .label {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     color: grey;
 }
