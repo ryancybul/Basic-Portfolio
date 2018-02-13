@@ -86,14 +86,27 @@ nav a {
 
 .input {
     width: 100%;
+    margin: 5px auto;
+}
+
+.label {
+    padding: 20px 0px;
+    border: 1px solid red;
 }
 
 .submit {
-    display: block;
+    display:inline-block;
     background-color: #55aaa4;
     color: white;
-    padding: 20px;
+    padding:10px 30px;
+    margin: 10px auto;
     text-decoration: none;
+}
+
+.msg {
+    min-height: 180px;
+    min-width: 600px;
+    max-width: 600px;
 }
 
 
