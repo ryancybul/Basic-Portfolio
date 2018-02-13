@@ -1,13 +1,32 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
     height: 100%;
+    display: flex;
+    flex-direction: column;
     background-image: url("./../images/cork-wallet.png")
 }
+
+.content {
+    flex: 1 0 auto;
+}
+
 /*header style*/
 
 header {
     background: white;
     height: 80px;
     width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header-wrapper {
@@ -29,24 +48,29 @@ header {
 }  
 
 nav a {
-    padding: 15px;
+    padding: 15px 20px;
     text-decoration: none;
-    padding: 0px 20px 0px 20px;
 }
 
  /*content section*/
 
 .content-wrapper    {
     width: 960px;
-    margin: 40px auto auto auto;
+    margin: 120px auto auto auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+/*about me*/
 
 .content-main-section {
     width: 650px;
     background: white;
-    padding: 25px 25px 25px 25px;
+    padding: 25px 25px;
+}
+
+.about-me {
+    padding: 0px 0px 20px 15px;
 }
 
 .content-main-section p {
@@ -54,9 +78,12 @@ nav a {
     text-indent: 25px;
 }
 
-.hr-margin {
-    margin: 25px 0px 25px 0px; 
+.content-padding    {
+    padding-top: 10px;
 }
+
+/*form*/
+
 
 /*connect with me*/
 
@@ -70,7 +97,8 @@ nav a {
     height: 40%;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    padding-top: 10px;  
 }
 
 .hr-connect {
@@ -81,8 +109,7 @@ nav a {
 
 .icons-connect {
     height: 50%;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 0px 35px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -93,24 +120,29 @@ nav a {
 .footer {
     background: #666666;
     height: 80px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    flex-shrink: 0;
 }
 
 .footer-text {
     text-align: center;
     font-size: .75em;
-    padding-top: 40px;
+    padding-top: 30px;
     color: white;
     
 }
+
+/*line style*/
 
 .hr-thick { 
    border-top: 2px solid #cacdcd;
    margin: 0 auto;
 }
 
+.hr-footer {
+    border: 5px solid #5daaa3;
+    margin: 0 auto;
+}
 
 
 /*font*/

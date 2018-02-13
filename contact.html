@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
+    <div class="content">
     <!-- header -->
     <header>
         <nav class="header-wrapper">
@@ -23,15 +24,26 @@
     <hr class="hr-thick">
 
     <!-- content -->
-    <section class="content-wrapper">
+    <div class="content-wrapper">
         <div class="content-main-section">
             <div>
-                <h1>Contact</h1> 
+                <h1 class="about-me">Contact</h1> 
             </div>
-            <hr class="hr-thick hr-margin">
-            <article>
-    
-        </article>
+            <hr class="hr-thick">
+            <form action="/my-handling-form-page" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_mail">
+                </div>
+                <div>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+            </form> 
         </div>
 
         <!--Connect with me -->
@@ -44,12 +56,15 @@
                 <a href="https://stackoverflow.com/users/9005961/ryan-cybul" target="_blank"><img class="resize-icon" src="./assets/images/stackoverflow.png" alt="stockoverflow.png"></a>
             </div>    
         </div>
-    </section>
+    </div>
+
+    </div>
 
     <!-- footer -->
 
     <footer class="footer">
-            <p class="footer-text">@Copyright 2018 Ryan Cybul</p>
+        <hr class="hr-footer">    
+        <p class="footer-text">@Copyright 2018 Ryan Cybul</p>
     </footer>
 </body>
 </html>
