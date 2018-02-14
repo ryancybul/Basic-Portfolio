@@ -1,6 +1,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -13,9 +14,9 @@ body {
     background-image: url("../images/cork-wallet.png")
 }
 
-.content {
+    .content {
     flex: 1 0 auto;
-}
+} 
 
 /*header style*/
 
@@ -56,7 +57,7 @@ nav a {
     width: 960px;
     margin: 120px auto 60px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 /*about me*/
@@ -144,6 +145,7 @@ nav a {
     background: #666666;
     height: 80px;
     width: 100%;
+    margin-top: auto;
     flex-shrink: 0;
 }
 
@@ -152,7 +154,6 @@ nav a {
     font-size: .75em;
     padding-top: 30px;
     color: white;
-    
 }
 
 /*line style*/
