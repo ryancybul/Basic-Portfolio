@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///Users/ryancybul/code/Hangman-Game/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Simpsons Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./The Simpsons Hangman_files/style.css">
+    <script src="./The Simpsons Hangman_files/game.js"></script>
+</head>
+<body>
+    <h1>The Simpsons Hangman</h1>
+    <h2>Press any key to get started!</h2>
+    <h2>Wins: </h2>
+    <h2>Losses: <span id="loss"></span> </h2>
+    <h2>Current Word: <span id="target-id">m _ g g _ _</span></h2>
+    <h2>Guesses left: <span id="numberOfGuesses">5</span></h2>
+    <h2>Letters guessed: <span id="dashWrongGuess">Meta Meta</span></h2>
+
+    <script>
+
+        //Global variables
+
+        let words = ["maggie"];
+        let wins = 0;
+        let loss = 0;
+        let numberOfGuesses = 6;
+        //stores the underscores
+        let wordLength = [];
+        //indexed input as letter
+        let dashWrongGuess = [];
+
+
+
+        //This function will pick our word. 
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+        //Assigns random word to the variable. 
+        let randWord = getRandomWord();
+        console.log(randWord);
+
+        //Pushes word-length to the DOM as understcores 
+        for (let i=0; i < randWord.length; i++) {
+            wordLength.push("_");
+        }
+        document.getElementById("target-id").textContent = wordLength.join(" ");
+
+        
+
+        //Events
+        document.onkeyup = function (event) {
+
+        //Captures user key
+        let userKey = event.key;
+
+        
+        //What happens if guess is correct. 
+        if (randWord.indexOf(userKey) > -1) {
+            for (let i = 0; i < randWord.length; i++) {
+                if(randWord[i] === userKey) {
+                    wordLength[i] = userKey;
+                    wordLengthStr = wordLength.join(" ");
+                    document.getElementById("target-id").textContent = wordLengthStr;  
+                }
+            }
+
+        }
+        //What happens if guess is wrong
+        else {
+        dashWrongGuess.push(userKey);
+        dashWrongGuessStr = dashWrongGuess.join(" ");
+        document.getElementById("dashWrongGuess").textContent = dashWrongGuessStr;
+        document.getElementById("numberOfGuesses").textContent = numberOfGuesses--;
+        }
+
+        //reset       
+
+    }
+
+
+    // var word = APPLE
+    // var blankGuess = "_ _ _ _ _"
+    // if A in word
+    // let loc = word.indexof('a')
+    // blankGuess[0]=event.key
+    
+    </script>
+    
+    
+
+</body></html>
